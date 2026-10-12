@@ -35,7 +35,7 @@ A proposta é permitir que uma pessoa personalize uma carta virtual e compartilh
 A página foi publicada utilizando o GitHub Pages.
 
 **Acesse o projeto:**  
-https://vkskkga-maker.github.io/carta-musica/
+https://vitormanoelferreiraa-creator.github.io/carta-musica/
 
 ## 📁 Estrutura do projeto
 
