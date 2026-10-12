@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Núcleo do Sistema</title>
+  <title>Sistema</title>
   <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;600&display=swap"
@@ -42,17 +42,6 @@
       z-index: -2;
       pointer-events: none;
       filter: brightness(0.6) contrast(1.1);
-    }
-
-    #bg-overlay {
-      position: fixed;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(6, 6, 12, 0.4), rgba(255, 31, 91, 0.08));
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      z-index: -1;
-      pointer-events: none;
-      transition: all 1.5s ease;
     }
 
     body.started #bg-overlay {
@@ -827,19 +816,19 @@
 
   <video id="bg-video" autoplay muted loop playsinline>
     <source
-      src="https://github.com/Baque2005/Organizador/raw/refs/heads/master/From%20KlickPin%20CF%20Cute%20date%20night%20thoughts%20with%20easy%20charm%20designed%20for%20beautiful%20Pinterest%20saves%20for%20cozy%20hearts%20%F0%9F%92%96%20-%20Pin-1688918605802526.mp4"
+      src="./video/fundo.mp4"
       type="video/mp4">
   </video>
 
   <div id="bg-overlay"></div>
 
-  <div id="timer-container">CONEXÃO ATIVA // <span id="timer-live">00d 00h 00m 00s</span> ❤</div>
+  <div id="timer-container">NAMORO-DATA: <span id="timer-live">00d 00h 00m 00s</span> ❤</div>
 
   <div id="start-screen">
     <img class="start-image"
-      src="https://tse1.mm.bing.net/th/id/OIP.Q6KTXchzZJfOsHmLrxrU7QHaHR?r=0&w=1000&h=983&rs=1&pid=ImgDetMain&o=7&rm=3"
+      src="https://i.pinimg.com/originals/7d/c7/4d/7dc74da7ccd30d80542206723b7b1254.jpg"
       alt="Gatinho Fofo">
-    <div id="start-text">INICIALIZAR SISTEMA_(nome).exe</div>
+    <div id="start-text">VIDA</div>
     <button id="start-btn">Acessar</button>
   </div>
 
@@ -888,7 +877,7 @@
   <div id="gallery-overlay">
     <div class="gallery-container">
       <button class="close-gallery" id="gallery-close-btn">&times;</button>
-      <h2 class="gallery-title">Arquivos Guardados // Mais Linda do Mundo ✨</h2>
+      <h2 class="gallery-title">A galeria mais linda do Mundo ✨</h2>
       <div class="gallery-grid" id="gallery-grid"></div>
     </div>
   </div>
@@ -980,7 +969,7 @@
     nextBtn.addEventListener('click', (e) => { e.stopPropagation(); proximaMusica(); });
     prevBtn.addEventListener('click', (e) => { e.stopPropagation(); musicaAnterior(); });
 
-    const dataDoNamoro = new Date(2025, 5, 12, 20, 0, 0); // data do namoro de vocês
+    const dataDoNamoro = new Date("2026-09-12T00:00:00"); // data do namoro de vocês
     function atualizarContador() {
       const agora = new Date();
       const diferenca = agora - dataDoNamoro;
@@ -992,7 +981,7 @@
     }
     setInterval(atualizarContador, 1000);
     //fotos da namorada
-    const fotosDaNamorada = []
+    const fotosDaNamorada = [];
     // fotos de gatinhos fofos
     const fotosFofasGatinhos = [
       "https://tse4.mm.bing.net/th/id/OIP.6WcA9WQ27WXSlYseu7zYKgHaHa?w=1080&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3",
@@ -1017,7 +1006,7 @@
     const todasAsFotosDaGaleria = [...fotosDaNamorada, ...fotosFofasGatinhos];
     todasAsFotosDaGaleria.forEach((url, index) => {
       const img = document.createElement('img');
-      img.src = url; img.className = 'gallery-item'; img.style.animationDelay = `${index * 0.04}s`;
+      img.src = url; img.className = 'gallery-item'; img.style.animationDelay = `${index * 0.03}s`;
       img.addEventListener('click', () => window.open(url, '_blank'));
       galleryGrid.appendChild(img);
     });
@@ -1069,7 +1058,55 @@
       }
 
       let activeFallingTexts = 0; const maxFallingTexts = 25;
-      const frases = ["Eu tee amoooo", "Você é minha vida", "😒😒", "❤", "❤️❤️"];
+      const frases = [
+        "Eu tee amoooo ❤️",
+        "Você é minha vida 🥹❤️",
+        "Minha cura ❤️",
+        "Minha pessoa favorita 🥰",
+        "Meu lugar favorito é com você ❤️",
+        "Você deixa meus dias melhores 💕",
+        "Eu escolheria você de novo e de novo ❤️",
+        "Meu amor todinho é seu 🥹",
+        "Você é meu porto seguro ❤️",
+        "Ainda bem que eu te encontrei 🥰",
+        "Eu amo você mais do que chocolate 🍫❤️",
+        "Meu coração é seu ❤️",
+        "Você é meu presente favorito 🎁❤️",
+        "Eu + você = nós ❤️",
+        "Meu amor por você não cabe nesse site 😭❤️",
+        "Casa comigo logo 😒💍",
+        "Você não tem concorrência, amor 😌❤️",
+        "Minha namorada é simplesmente perfeita 😎❤️",
+        "Pare de ser tão linda, eu não aguento 😭❤️",
+        "Você é oficialmente a dona do meu coração 🔒❤️",
+        "Se eu pudesse, te dava um beijo agora 😘",
+        "Saudades de você já, mesmo falando com você agora 🥹",
+        "Eu olhando pra você: 😍",
+        "Eu sem você: 🧍",
+        "Eu com você: 🥰❤️",
+        "Você: linda ❤️",
+        "Eu: apaixonado 🤡❤️",
+        "Amor, você hackeou meu coração? 👀❤️",
+        "A culpa é sua eu ser tão apaixonado 😒❤️",
+        "Você me paga... com beijos 😌💋",
+        "Te amo, infelizmente 😒❤️",
+        "Que ódio... te amo demais 😒💕",
+        "Eu ia fazer uma frase bonita, mas fiquei pensando em você 🥹",
+        "Alerta: excesso de fofura detectado 🚨❤️",
+        "Sistema operacional: apaixonado.exe ❤️",
+        "Erro 404: não encontrei alguém melhor que você 😎❤️",
+        "Processando amor... 100% ❤️",
+        "Você é meu bug favorito 🐛❤️",
+        "Meu coração pertence a você, sem direito a devolução 😌❤️",
+        "Só queria dizer que eu te amo. Pronto. 😭❤️",
+        "❤️",
+        "❤️❤️",
+        "🥹❤️",
+        "😒❤️",
+        "😍❤️",
+        "💋❤️",
+        "🫶❤️"
+      ];
       // declações em texto
 
       setInterval(() => {
@@ -1109,7 +1146,7 @@
         setTimeout(() => {
           fallingElement.remove();
           activeFallingTexts--;
-        }, parseFloat(duration) * 1000);
+        }, parseFloat(duration) * 2000);
       }, 600);
     }
   </script>
